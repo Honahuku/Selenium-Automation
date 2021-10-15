@@ -58,14 +58,14 @@ WebDriverWait(driver, 300000).until(expected_conditions.visibility_of_element_lo
 # 17 | click | id=idSIButton9 | "いいえ"をクリックする。今回はシークレットウィンドウで開いているためこのログイン画面は毎回表示される。よって"はい"を選択した場合でも問題ない。
 driver.find_element(By.ID, "idSIButton9").click()
 #ログイン処理ここまで
-# 18 | waitForElementVisible | id=SelectId_0_placeholder | 300000 | 健康行動観察表のページが読み込まれ次の要素が有効になるまで待機
+# 18 | waitForElementVisible | id=SelectId_0_placeholder | 300000 | ページが読み込まれ次の要素が有効になるまで待機
 WebDriverWait(driver, 300000).until(expected_conditions.visibility_of_element_located((By.ID, "SelectId_0_placeholder")))
 # 19 | click | id=SelectId_0_placeholder | 体温をクリックし一覧表示にする
 driver.find_element(By.ID, "SelectId_0_placeholder").click()
 # 20 | waitForElementVisible | css=.select-option-nocheck:nth-child(15) | 300000 | ボタンがアクティブになるまで待機
 WebDriverWait(driver, 300000).until(expected_conditions.visibility_of_element_located((By.CSS_SELECTOR, ".select-option-nocheck:nth-child(15)")))
 
-#体温のランダム化処理。毎回同じ体温を入力すると怪しまれるためpythonのrandom関数を用いて毎回異なる値を入力する
+#ランダム化処理。pythonのrandom関数を用いて毎回異なる値を入力する
 i=random.randint(356,366) #変数iに356から366の間で乱数を生成した結果を格納する
 print(i) #コンソールにiを表示
 if i == 356:
