@@ -1,2 +1,3 @@
 # Selenium-Automation
+このwebスクレイピングでは情報の取得ではなく定期的にサーバーにデータを送信するスクレイピングを行っています
 Qiitaに掲載したPythonとSeleniumの自動化記事のコード置き場です
